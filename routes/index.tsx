@@ -3,8 +3,8 @@
 export default async function Home() {
 
   const kv = await Deno.openKv();
-  for (let i = 0; i < 5000; i++) {
-    kv.set(["hello", i], "かきくけこ".repeat(200));
+  for (let i = 0; i < 5; i++) {
+    kv.set(["hello", i], "かきくけこ".repeat(2));
   }
   kv.set(["hello", 100], "あいうえお");
   kv.set(["hello", 1000], "あいうえお1");
